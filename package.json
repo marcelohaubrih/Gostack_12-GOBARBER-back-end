@@ -7,8 +7,9 @@
   "description": "Modulo 2 - Curso GoStack - back-end construido em aula",
   "scripts": {
     "build": "tsc",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts"
+    "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpileOnly --ignore-watch node_modules src/shared/infra/http/server.ts",
+    "start": "ts-node-dev src/shared/infra/http/server.ts",
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
     "@types/cors": "^2.8.6",
@@ -31,6 +32,7 @@
     "@types/jsonwebtoken": "^8.5.0",
     "@types/multer": "^1.4.3",
     "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.6.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -38,6 +40,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.0.5",
     "ts-node-dev": "^1.0.0-pre.49",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.5"
   }
 }
