@@ -4,7 +4,7 @@ import { getCustomRepository } from 'typeorm';
 
 import ensureAuthenticated from '@modules/users/infra/http/Middlewares/ensureAuthenticated';
 
-import AppointmentsRepository from '@modules/appointments/repositories/AppointmentsRepository';
+import AppointmentsRepository from '@modules/appointments/infra/typeorm/repositories/AppointmentsRepository';
 import CreateAppointementService from '@modules/appointments/services/CreateAppointmentService';
 
 const appointmentsRouter = Router();
