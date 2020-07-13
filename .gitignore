@@ -1,5 +1,9 @@
 node_modules/
 dist/
 .env
+.env.production
+.env.testing
 ormconfig.json
 .vscode/
+tmp/*
+!tmp/.gitkeep

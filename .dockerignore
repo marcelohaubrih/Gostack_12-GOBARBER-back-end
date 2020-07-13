@@ -1,0 +1,10 @@
+node_modules
+
+.dockerignore
+Dockerfile
+.env
+.env.production
+.env.testing
+.yml
+
+*.log
