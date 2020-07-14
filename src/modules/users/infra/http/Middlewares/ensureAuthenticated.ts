@@ -9,10 +9,14 @@ interface TokenPayload {
   sub: string;
 }
 
-export default function ensureAuthenticated(request: Request, response: Response, next: NextFunction): void{
+export default function ensureAuthenticated(
+  request: Request,
+  response: Response,
+  next: NextFunction,
+): void {
   const authHeader = request.headers.authorization;
 
-  if(!authHeader){
+  if (!authHeader) {
     throw new AppError('Token is missing', 401);
   }
 
@@ -24,11 +28,10 @@ export default function ensureAuthenticated(request: Request, response: Response
 
     request.user = {
       id: sub,
-    }
+    };
 
     return next();
   } catch {
     throw new AppError('invalid Token', 401);
   }
-
 }
