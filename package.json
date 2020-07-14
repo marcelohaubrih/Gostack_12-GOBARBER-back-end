@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "author": "Marcelo Haubrih",
-  "description": "Modulo 2 - Curso GoStack - back-end construido em aula",
+  "description": "Modulo 2 - Curso GoStack - back-end construído em aula",
   "scripts": {
     "build": "tsc",
     "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpileOnly --ignore-watch node_modules src/shared/infra/http/server.ts",
