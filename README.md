@@ -2,8 +2,8 @@
 
 ### ♠ Criando arquivo de Migrations
 - yarn typeorm migration:create -n CreateAppointments
-OBS: Só edite os arquivos de migrations se não foi enviado os codigos para produção
-Caso seja nescessário editar um arquivo de migrations execute o comando (yarn typeorm migration:revert)
+OBS: Só edite os arquivos de migrations se não foi enviado os códigos para produção
+Caso seja necessário editar um arquivo de migrations execute o comando (yarn typeorm migration:revert)
 
 ### ♣ Executando as Migrations
 - yarn typeorm migration:run
@@ -22,7 +22,7 @@ Para Execução da API e DB juntos executar:
 
 Versão 1.0:
 
-## ⚙ Dispoível as seguintes rotas
+## ⚙ Disponível as seguintes rotas
 - [x] routes.use('/appointments', appointmentsRouter);
 - [x] routes.use('/users', usersRouter);
 - [x] routes.use('/sessions', sessionsRouter);
