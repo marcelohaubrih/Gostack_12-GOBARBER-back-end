@@ -1,6 +1,0 @@
-### List all users
-http://servelx.duckdns.org:3001/api/user
-
-### List unique user
-http://servelx.duckdns.org:3001/api/user/5f09e5b2b14a7a001c1e2482
-
