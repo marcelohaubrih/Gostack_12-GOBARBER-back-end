@@ -44,7 +44,7 @@ class ResetPasswordService {
     // }
 
     if (differenceInHours(Date.now(), tokenCreatedAt) > 2) {
-      console.log('If differenceInHours');
+      // console.log('If differenceInHours');
       throw new AppError('Token expired');
     }
 
