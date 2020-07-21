@@ -33,7 +33,7 @@ Versão 1.0:
 >## Recuperação de senha
 >>**RF (Requisitos Funcionáis)**
 
- - [ ] O usuário deve poder recupear sua senha informando o email;
+ - [ ] O usuário deve poder recuperar sua senha informando o email;
  - [ ] O usuário deve receber um email com instruções de recuperação de senha;
  - [ ] O usuário deve poder resetar sua senha;
 
