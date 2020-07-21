@@ -26,6 +26,8 @@ Versão 1.0:
 - [x] routes.use('/appointments', appointmentsRouter);
 - [x] routes.use('/users', usersRouter);
 - [x] routes.use('/sessions', sessionsRouter);
+- [x] routes.use('/password', passwordRouter);
+- [x] routes.use('/profile', profileRouter);
 ---
 > # Anotações de Desenvolvimento
 >Funcionalidades macro
@@ -33,35 +35,31 @@ Versão 1.0:
 >## Recuperação de senha
 >>**RF (Requisitos Funcionáis)**
 
- - [ ] O usuário deve poder recuperar sua senha informando o email;
- - [ ] O usuário deve receber um email com instruções de recuperação de senha;
- - [ ] O usuário deve poder resetar sua senha;
+ - [x] O usuário deve poder recuperar sua senha informando o email;
+ - [x] O usuário deve receber um email com instruções de recuperação de senha;
+ - [x] O usuário deve poder resetar sua senha;
 
 >>**RNF (Requisitos não Funcionais)**
 
- - [ ] Utilizar mailtrap para teste de emails em ambiente de dev;
- - [ ] Utilizar Amazon SES para envios em produção;
- - [ ] O envio deve acontecer em segundo plano (background job);
+ - [x] Utilizar mailtrap para teste de emails em ambiente de dev;
+ - [x] Utilizar Amazon SES para envios em produção;
+ - [x] O envio deve acontecer em segundo plano (background job);
 
 >>**RN (Regras de Negócios)**
 
- - [ ] O link enviado por email para resetar senha, deve expirar em 2h;
- - [ ] O usuário precisa confirmar nova senha ao resetar sua senha;
+ - [x] O link enviado por email para resetar senha, deve expirar em 2h;
+ - [x] O usuário precisa confirmar nova senha ao resetar sua senha;
 ---
 >## Atualização do perfil
 >>**RF**
 
- - [ ] O usuário deve poder atualizar seu nome, email e senha;
-
->>**RNF**
-
- - [ ]
+ - [x] O usuário deve poder atualizar seu nome, email e senha;
 
 >>**RN**
 
- - [ ] O usuário não pode alterar seu email para um email já cadastrado;
- - [ ] Para atualizar sua senha, o usuário deve informar sua senha antiga;
- - [ ] Para atualizar sua senha, o usuário precisa confirmar a nova senha;
+ - [x] O usuário não pode alterar seu email para um email já cadastrado;
+ - [x] Para atualizar sua senha, o usuário deve informar sua senha antiga;
+ - [x] Para atualizar sua senha, o usuário precisa confirmar a nova senha;
 ---
 >## Painel do Prestador
 >>**RF**
