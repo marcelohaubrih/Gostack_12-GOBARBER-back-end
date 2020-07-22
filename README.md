@@ -82,8 +82,8 @@ Versão 1.0:
 >>**RF**
 
  - [x] O usuário deve poder listar todos os prestadores de serviço cadastrado;
- - [ ] O usuário deve poder listar os dias de um mês com pelo menos um horário disponível de um prestador;
- - [ ] O usuário deve poder listar horários disponíveis em um dia específico de um prestador;
+ - [x] O usuário deve poder listar os dias de um mês com pelo menos um horário disponível de um prestador;
+ - [x] O usuário deve poder listar horários disponíveis em um dia específico de um prestador;
  - [x] O usuário deve poder realizar um novo agendamento com um prestador;
 
 >>**RNF**
