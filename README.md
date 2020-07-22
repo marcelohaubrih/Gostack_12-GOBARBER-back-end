@@ -81,10 +81,10 @@ Versão 1.0:
 >## Agendamento de serviços
 >>**RF**
 
- - [ ] O usuário deve poder listar todos os prestadores de serviço cadastrado;
+ - [x] O usuário deve poder listar todos os prestadores de serviço cadastrado;
  - [ ] O usuário deve poder listar os dias de um mês com pelo menos um horário disponível de um prestador;
  - [ ] O usuário deve poder listar horários disponíveis em um dia específico de um prestador;
- - [ ] O usuário deve poder realizar um novo agendamento com um prestador;
+ - [x] O usuário deve poder realizar um novo agendamento com um prestador;
 
 >>**RNF**
 
@@ -92,8 +92,8 @@ Versão 1.0:
 
 >>**RN**
 
- - [ ] Cada agendamento deve furar 1h exatamente;
- - [ ] Os agendamentos devem estar disponíveis entre 8h as 18h (Primeiro as 8h, Último as 17h);
- - [ ] O usuário não deve agendar um um horário já ocupado;
- - [ ] O usuário não pode agendar em um horário que já passou;
- - [ ] O usuário não pode agendar serviço consigo mesmo;
+ - [x] Cada agendamento deve furar 1h exatamente;
+ - [x] Os agendamentos devem estar disponíveis entre 8h as 18h (Primeiro as 8h, Último as 17h);
+ - [x] O usuário não deve agendar um um horário já ocupado;
+ - [x] O usuário não pode agendar em um horário que já passou;
+ - [x] O usuário não pode agendar serviço consigo mesmo;
