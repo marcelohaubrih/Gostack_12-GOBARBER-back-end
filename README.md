@@ -64,19 +64,19 @@ Versão 1.0:
 >## Painel do Prestador
 >>**RF**
 
- - [ ] O prestador deve poder listar seus agendamentos de um dia específico;
- - [ ] O prestador deve receber uma notificação sempre que houver um novo agendamento;
- - [ ] O prestador deve poder visualizar as notificações não lidas;
+ - [x] O prestador deve poder listar seus agendamentos de um dia específico;
+ - [x] O prestador deve receber uma notificação sempre que houver um novo agendamento;
+ - [x] O prestador deve poder visualizar as notificações não lidas;
 
 >>**RNF**
 
- - [ ] Os agendamentos do prestador no dia devem ser armazenados em cache;
- - [ ] As notificações do prestador devem ser armazenadas no mongoDB;
- - [ ] As notificações do prestador devem ser enviadas em tempo-real utilizando Socket.io;
+ - [x] Os agendamentos do prestador no dia devem ser armazenados em cache;
+ - [x] As notificações do prestador devem ser armazenadas no mongoDB;
+ - [x] As notificações do prestador devem ser enviadas em tempo-real utilizando Socket.io;
 
 >>**RN**
 
- - [ ] A notificação deve ter um status de lida ou não lida para que o prestador possa controlar
+ - [x] A notificação deve ter um status de lida ou não lida para que o prestador possa controlar
 ---
 >## Agendamento de serviços
 >>**RF**
