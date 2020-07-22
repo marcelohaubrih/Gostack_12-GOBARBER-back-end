@@ -23,7 +23,12 @@ export default class EtherealMailProvider implements IMailProvider {
           pass: account.pass,
         },
       });
-
+      // host: process.env.SMTP_HOST,
+      // port: process.env.SMTP_PORT,
+      // secure: process.env.SMTP_SECURE,
+      // auth: {
+      //   user: process.env.SMTP_USER,
+      //   pass: process.env.SMTP_PASS,
       this.client = transporter;
     });
   }
@@ -36,8 +41,8 @@ export default class EtherealMailProvider implements IMailProvider {
   }: ISendMailDTO): Promise<void> {
     const info = await this.client.sendMail({
       from: {
-        name: from?.name || 'Equipe GoBarber',
-        address: from?.email || 'equipe@gobarber.com.br',
+        name: from?.name || `${process.env.SMTP_FROM_NAME}`,
+        address: from?.email || `${process.env.SMTP_FROM_ADDRESS}`,
       },
       to: {
         name: to.name,
