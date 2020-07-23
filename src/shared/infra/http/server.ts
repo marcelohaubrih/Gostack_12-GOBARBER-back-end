@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import cors from 'cors';
 import 'dotenv/config';
 import { errors } from 'celebrate';
