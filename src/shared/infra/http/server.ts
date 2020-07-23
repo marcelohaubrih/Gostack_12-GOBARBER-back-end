@@ -39,6 +39,10 @@ app.use(
   },
 );
 
-app.listen(3333, () => {
-  console.warn('✔ - Server started on port 3333');
+let apiServerURL = process.env.APP_API_URL || 'http://localhost';
+const apiServerPort = process.env.APP_API_PORT || 3333;
+apiServerURL = `${apiServerURL}:${apiServerPort}`;
+
+app.listen(apiServerPort, () => {
+  console.warn(`✔ - Server started ${apiServerURL}`);
 });

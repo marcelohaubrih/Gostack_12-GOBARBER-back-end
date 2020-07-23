@@ -5,6 +5,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import storageConfig from '@config/storage';
 
 import { Exclude, Expose } from 'class-transformer';
 
@@ -34,9 +35,20 @@ class User {
 
   @Expose({ name: 'avatar_url' })
   geAvatar_url(): string | null {
-    return this.avatar
-      ? `${process.env.APP_API_URL}/files/${this.avatar}`
-      : null;
+    if (!this.avatar) {
+      return null;
+    }
+
+    switch (storageConfig.driver) {
+      case 'disk':
+        return this.avatar
+          ? `${process.env.APP_API_URL}:${process.env.APP_API_PORT}/files/${this.avatar}`
+          : null;
+      case 's3':
+        return this.avatar ? `${storageConfig.bucketURL}/${this.avatar}` : null;
+      default:
+        return null;
+    }
   }
 }
 

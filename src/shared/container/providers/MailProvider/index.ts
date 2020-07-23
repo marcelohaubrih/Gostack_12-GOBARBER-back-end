@@ -12,6 +12,14 @@ const providers = {
   mailjet: container.resolve(MailJetMailProvider),
 };
 
+const providersConsole = {
+  ethereal: 'Ethereal (TestAccount)',
+  ses: 'AWS SES - (Produção)',
+  mailjet: 'MailJet - (Produção)',
+};
+
+console.log(`✉ - Mail Provider: ${providersConsole[mailConfig.driver]}`);
+
 container.registerInstance<IMailProvider>(
   'MailProvider',
   providers[mailConfig.driver],
