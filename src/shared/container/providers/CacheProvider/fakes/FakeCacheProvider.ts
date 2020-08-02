@@ -7,7 +7,7 @@ export default class FakeCacheProvider implements ICacheProvider {
   private cache: ICacheData = {};
 
   public async save(key: string, value: any): Promise<void> {
-    console.log(`Salvando cache...(${key})`);
+    // console.log(`Salvando cache...(${key})`);
     this.cache[key] = JSON.stringify(value);
   }
 
@@ -17,17 +17,17 @@ export default class FakeCacheProvider implements ICacheProvider {
       return null;
     }
     const parsedDate = JSON.parse(data) as T;
-    console.log(`Recuperando cache...(${key})`);
+    // console.log(`Recuperando cache...(${key})`);
     return parsedDate;
   }
 
   public async invalidate(key: string): Promise<void> {
-    console.log(`Invalidando cache...(${key})`);
+    // console.log(`Invalidando cache...(${key})`);
     delete this.cache[key];
   }
 
   public async invalidatePrefix(prefix: string): Promise<void> {
-    console.log(`Invalidando Prefixo cache...(${prefix})`);
+    // console.log(`Invalidando Prefixo cache...(${prefix})`);
     const keys = Object.keys(this.cache).filter(key =>
       key.startsWith(`${prefix}:`),
     );

@@ -10,6 +10,7 @@ export default class RedisCacheProvider implements ICacheProvider {
   }
 
   public async save(key: string, value: any): Promise<void> {
+    // console.log(`Salvando cache...(${key})`);
     await this.client.set(key, JSON.stringify(value));
   }
 
@@ -19,14 +20,17 @@ export default class RedisCacheProvider implements ICacheProvider {
       return null;
     }
     const parsedDate = JSON.parse(data) as T;
+    // console.log(`Recuperando cache...(${key})`);
     return parsedDate;
   }
 
   public async invalidate(key: string): Promise<void> {
+    // console.log(`Invalidando cache...(${key})`);
     await this.client.del(key);
   }
 
   public async invalidatePrefix(prefix: string): Promise<void> {
+    // console.log(`Invalidando Prefixo cache...(${prefix})`);
     const keys = await this.client.keys(`${prefix}:*`);
 
     const pipeline = await this.client.pipeline();
