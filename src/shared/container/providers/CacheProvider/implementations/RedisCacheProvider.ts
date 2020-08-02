@@ -11,7 +11,6 @@ export default class RedisCacheProvider implements ICacheProvider {
 
   public async save(key: string, value: any): Promise<void> {
     console.log(`Salvando cache...(${key})`);
-    console.log(key, value);
     await this.client.set(key, JSON.stringify(value));
   }
 
@@ -27,6 +26,7 @@ export default class RedisCacheProvider implements ICacheProvider {
 
   public async invalidate(key: string): Promise<void> {
     console.log(`Invalidando cache...(${key})`);
+    await this.client.del(key);
   }
 
   public async invalidatePrefix(prefix: string): Promise<void> {
