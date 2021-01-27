@@ -14,4 +14,8 @@ COPY . /home/node/api
 
 EXPOSE 3333
 
+RUN apk update
+
+RUN apk add --update tzdata
+
 CMD ["yarn", "dev:server"]
